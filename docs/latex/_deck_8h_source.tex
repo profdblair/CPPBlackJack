@@ -1,0 +1,28 @@
+\doxysection{Deck.\+h}
+\hypertarget{_deck_8h_source}{}\label{_deck_8h_source}\index{/Users/davidblair/Desktop/CMakeClassEx/src/Deck.h@{/Users/davidblair/Desktop/CMakeClassEx/src/Deck.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Card.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_deck}{Deck}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ vector<Card>\ deck;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ buildDeck();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ shuffleDeck();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_deck}{Deck}}(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_card}{Card}}\ Deal();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{string}\ ToString();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ CardsInDeck();}
+\DoxyCodeLine{00022\ \};}
+
+\end{DoxyCode}
