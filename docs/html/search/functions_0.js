@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['card_0',['Card',['../class_card.html#a1e6b58401db815a10767b77e261b5d50',1,'Card']]]
+  ['addcard_0',['AddCard',['../class_player.html#a8dfc29920e4a13d4d239024d761ec765',1,'Player']]]
 ];

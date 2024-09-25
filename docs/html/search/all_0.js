@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['card_0',['Card',['../class_card.html',1,'Card'],['../class_card.html#a1e6b58401db815a10767b77e261b5d50',1,'Card::Card()']]],
-  ['card_2ecpp_1',['Card.cpp',['../_card_8cpp.html',1,'']]]
+  ['addcard_0',['AddCard',['../class_player.html#a8dfc29920e4a13d4d239024d761ec765',1,'Player']]],
+  ['algorithm_20considerations_1',['Algorithm Considerations',['../md__2_users_2davidblair_2_desktop_2_c_p_p_black_jack_2readme.html#autotoc_md2',1,'']]],
+  ['application_20tools_2',['Application Tools',['../md__2_users_2davidblair_2_desktop_2_c_p_p_black_jack_2readme.html#autotoc_md1',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tostring_0',['ToString',['../class_card.html#a7ef21e39610e6a5e027a7bf8ac5d6052',1,'Card']]]
+  ['isfaceup_0',['isFaceUp',['../class_card.html#ae2f667087de7f700be9695cea4eb5647',1,'Card']]]
 ];

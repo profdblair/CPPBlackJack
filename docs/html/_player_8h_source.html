@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Blackjack: /Users/davidblair/Desktop/CMakeClassEx/src/Player.h Source File</title>
+<title>Blackjack: /Users/davidblair/Desktop/CPPBlackJack/src/Player.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,42 +91,60 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Player.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Card.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using namespace </span>std;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_player.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_player.html">Player</a></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">string</span> _name;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    vector&lt;Card&gt; _hand;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">int</span> _winThreshold;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">int</span> calculateScore();</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">bool</span> isBusted;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_function" href="class_player.html#a91f7f9de4904bf3503bc72b592e78513">Player</a>(<span class="keywordtype">string</span> name, <span class="keywordtype">int</span> threshold);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">int</span> GetThreshold();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">string</span> GetName();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> AddCard(<a class="code hl_class" href="class_card.html">Card</a> card);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">string</span> ShowHand();</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> EmptyHand();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">int</span> CountCards();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">int</span> Score();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> FlipCard(<span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> FlipAllCards(<span class="keywordtype">bool</span> faceUp);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
+<a href="_player_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;Card.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_player.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="class_player.html">Player</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">string</span> _name;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    vector&lt;Card&gt; _hand;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">int</span> _winThreshold;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">int</span> calculateScore();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">bool</span> isBusted;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_function" href="class_player.html#a91f7f9de4904bf3503bc72b592e78513">Player</a>(<span class="keywordtype">string</span> name, <span class="keywordtype">int</span> threshold);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_player.html#a1c9e912599b6871c2b974c174ddaa0b7">GetThreshold</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_player.html#a973a7beb3854d9d187b59484cbcb6d5c">GetName</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a8dfc29920e4a13d4d239024d761ec765">AddCard</a>(<a class="code hl_class" href="class_card.html">Card</a> card);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_player.html#add9196891e1e5a2cc03c85e58a24c7cf">ShowHand</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> EmptyHand();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_player.html#a89a9da7e746752a0849ddb1fb37e3664">CountCards</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_player.html#ada18a66c0daf866606a5f2b8b0f2f68b">Score</a>();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a18ff2a1f039be66a0ad24c8bf53310c6">FlipCard</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#ae6e0f78239a4c449aa6a22dcc229bb29">FlipAllCards</a>(<span class="keywordtype">bool</span> faceUp);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>};</div>
 </div>
 <div class="ttc" id="aclass_card_html"><div class="ttname"><a href="class_card.html">Card</a></div><div class="ttdef"><b>Definition</b> Card.h:17</div></div>
-<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdef"><b>Definition</b> Player.h:10</div></div>
-<div class="ttc" id="aclass_player_html_a91f7f9de4904bf3503bc72b592e78513"><div class="ttname"><a href="class_player.html#a91f7f9de4904bf3503bc72b592e78513">Player::Player</a></div><div class="ttdeci">Player(string name, int threshold)</div><div class="ttdoc">Construct a new Player:: Player object.</div><div class="ttdef"><b>Definition</b> Player.cpp:19</div></div>
+<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdef"><b>Definition</b> Player.h:24</div></div>
+<div class="ttc" id="aclass_player_html_a18ff2a1f039be66a0ad24c8bf53310c6"><div class="ttname"><a href="class_player.html#a18ff2a1f039be66a0ad24c8bf53310c6">Player::FlipCard</a></div><div class="ttdeci">void FlipCard(int)</div><div class="ttdef"><b>Definition</b> Player.cpp:64</div></div>
+<div class="ttc" id="aclass_player_html_a1c9e912599b6871c2b974c174ddaa0b7"><div class="ttname"><a href="class_player.html#a1c9e912599b6871c2b974c174ddaa0b7">Player::GetThreshold</a></div><div class="ttdeci">int GetThreshold()</div><div class="ttdoc">Get the Threshold object.</div><div class="ttdef"><b>Definition</b> Player.cpp:31</div></div>
+<div class="ttc" id="aclass_player_html_a89a9da7e746752a0849ddb1fb37e3664"><div class="ttname"><a href="class_player.html#a89a9da7e746752a0849ddb1fb37e3664">Player::CountCards</a></div><div class="ttdeci">int CountCards()</div><div class="ttdef"><b>Definition</b> Player.cpp:108</div></div>
+<div class="ttc" id="aclass_player_html_a8dfc29920e4a13d4d239024d761ec765"><div class="ttname"><a href="class_player.html#a8dfc29920e4a13d4d239024d761ec765">Player::AddCard</a></div><div class="ttdeci">void AddCard(Card card)</div><div class="ttdef"><b>Definition</b> Player.cpp:74</div></div>
+<div class="ttc" id="aclass_player_html_a91f7f9de4904bf3503bc72b592e78513"><div class="ttname"><a href="class_player.html#a91f7f9de4904bf3503bc72b592e78513">Player::Player</a></div><div class="ttdeci">Player(string name, int threshold)</div><div class="ttdoc">Construct a new Player object.</div><div class="ttdef"><b>Definition</b> Player.cpp:19</div></div>
+<div class="ttc" id="aclass_player_html_a973a7beb3854d9d187b59484cbcb6d5c"><div class="ttname"><a href="class_player.html#a973a7beb3854d9d187b59484cbcb6d5c">Player::GetName</a></div><div class="ttdeci">string GetName()</div><div class="ttdoc">Get the Name object.</div><div class="ttdef"><b>Definition</b> Player.cpp:118</div></div>
+<div class="ttc" id="aclass_player_html_ada18a66c0daf866606a5f2b8b0f2f68b"><div class="ttname"><a href="class_player.html#ada18a66c0daf866606a5f2b8b0f2f68b">Player::Score</a></div><div class="ttdeci">int Score()</div><div class="ttdef"><b>Definition</b> Player.cpp:41</div></div>
+<div class="ttc" id="aclass_player_html_add9196891e1e5a2cc03c85e58a24c7cf"><div class="ttname"><a href="class_player.html#add9196891e1e5a2cc03c85e58a24c7cf">Player::ShowHand</a></div><div class="ttdeci">string ShowHand()</div><div class="ttdef"><b>Definition</b> Player.cpp:84</div></div>
+<div class="ttc" id="aclass_player_html_ae6e0f78239a4c449aa6a22dcc229bb29"><div class="ttname"><a href="class_player.html#ae6e0f78239a4c449aa6a22dcc229bb29">Player::FlipAllCards</a></div><div class="ttdeci">void FlipAllCards(bool faceUp)</div><div class="ttdef"><b>Definition</b> Player.cpp:51</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

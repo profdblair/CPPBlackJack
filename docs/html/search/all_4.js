@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['player_0',['Player',['../class_player.html',1,'Player'],['../class_player.html#a91f7f9de4904bf3503bc72b592e78513',1,'Player::Player()']]],
-  ['player_2ecpp_1',['Player.cpp',['../_player_8cpp.html',1,'']]]
+  ['flipallcards_0',['FlipAllCards',['../class_player.html#ae6e0f78239a4c449aa6a22dcc229bb29',1,'Player']]],
+  ['flipcard_1',['FlipCard',['../class_player.html#a18ff2a1f039be66a0ad24c8bf53310c6',1,'Player']]]
 ];
