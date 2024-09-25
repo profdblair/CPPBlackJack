@@ -24,6 +24,7 @@ add_executable(
   blackjacktests
   ./tests/blackjacktests.cpp
   ./src/Card.cpp
+  ./src/Deck.cpp
 )
 target_link_libraries(
   blackjacktests

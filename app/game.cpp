@@ -70,30 +70,37 @@ int main(int argc, char **argv)
 
     // int topScore = 0;
     bool winners = false;
+
     cout << "\nSorted scores:\n";
     for (int i = 0; i < players.size(); i++)
     {
-
+        bool busted = false;
         if (players[i].isBusted)
+        {
+            busted = true;
             cout << "Player " << players[i].GetName() << " final score: " << players[i].Score() << " BUSTED" << endl;
+        }
 
-        if (winners == false && !players[i].isBusted)
+        if (!busted)
         {
-            int s1 = players[i].Score();
-            int s2 = players[i + 1].Score();
-            if (s1 == s2)
-                winners = false;
+            if (winners == false && !players[i].isBusted)
+            {
+                int s1 = players[i].Score();
+                int s2 = players[i + 1].Score();
+                if (s1 == s2)
+                    winners = false;
+                else
+                    winners = true;
+            }
+
+            if (players[i].Score() == 21 && winners)
+            {
+                cout << "Player " << players[i].GetName() << " final score: " << players[i].Score() << " WINNER" << endl;
+            }
             else
-                winners = true;
-        }
-
-        if (players[i].Score() == 21 && winners)
-        {
-            cout << "Player " << players[i].GetName() << " final score: " << players[i].Score() << " BLACKJACK WINNER" << endl;
-        }
-        else
-        {
-            cout << "Player " << players[i].GetName() << " final score: " << players[i].Score() << endl;
+            {
+                cout << "Player " << players[i].GetName() << " final score: " << players[i].Score() << endl;
+            }
         }
     }
 }

@@ -10,6 +10,7 @@
  */
 #include <gtest/gtest.h>
 #include "../src/Card.h"
+#include "../src/Deck.h"
 
 // https://google.github.io/googletest/reference/assertions.html
 
@@ -18,7 +19,7 @@
  *      In this case, a card is created at the lowest valid suit integer
  *      and the highest valid value integer. Suit 1, Value 1
  */
-TEST(CardTest, TestValidLowCard)
+TEST(CardTest, ValidLowCard)
 {
     Card card(1, 1, true);
     EXPECT_EQ(card.GetValue(), 11);
@@ -30,7 +31,7 @@ TEST(CardTest, TestValidLowCard)
  *      In this case, a card is created at the highest valid suit integer
  *      and the highest valid value integer. Suit 4, Value 13
  */
-TEST(CardTest, TestValidHighCard)
+TEST(CardTest, ValidHighCard)
 {
     Card card(13, 4, true);
     EXPECT_EQ(card.GetValue(), 10);
@@ -42,7 +43,7 @@ TEST(CardTest, TestValidHighCard)
  *      In this case, a card is created using a 0 for suit. It should
  *      throw an exception that if caught results in a Succeed.
  */
-TEST(CardTest, TestSuitLow)
+TEST(CardTest, SuitLow)
 {
     try
     {
@@ -60,7 +61,7 @@ TEST(CardTest, TestSuitLow)
  *      In this case, a card is created using a 5 for suit. It should
  *      throw an exception that if caught results in a Succeed.
  */
-TEST(CardTest, TestSuitHigh)
+TEST(CardTest, SuitHigh)
 {
     try
     {
@@ -78,7 +79,7 @@ TEST(CardTest, TestSuitHigh)
  *      In this case, a card is created using a 0 for value. It should
  *      throw an exception that if caught results in a Succeed.
  */
-TEST(CardTest, TestValueLow)
+TEST(CardTest, ValueLow)
 {
     try
     {
@@ -96,7 +97,7 @@ TEST(CardTest, TestValueLow)
  *      In this case, a card is created using a 14 for value. It should
  *      throw an exception that if caught results in a Succeed.
  */
-TEST(CardTest, TestValueHigh)
+TEST(CardTest, ValueHigh)
 {
     try
     {
@@ -107,4 +108,18 @@ TEST(CardTest, TestValueHigh)
     {
         SUCCEED();
     }
+}
+
+TEST(DeckTest, DeckCardsInDeck)
+{
+    Deck deck(true);
+    int numCards = deck.CardsInDeck();
+    EXPECT_EQ(numCards, 52);
+}
+
+TEST(DeckTest, DeckDealFaceDown)
+{
+    Deck deck(false);
+    Card card = deck.Deal();
+    EXPECT_EQ(card.isFaceUp, false);
 }

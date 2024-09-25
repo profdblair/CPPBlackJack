@@ -1,6 +1,21 @@
+/**
+ * @file Deck.cpp
+ * @author your name (you@domain.com)
+ * @brief
+ * @version 0.1
+ * @date 2024-09-25
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
 #include <iostream>
 #include "Deck.h"
 
+/**
+ * @brief Construct a new Deck:: Deck object
+ *
+ * @param shuffle
+ */
 Deck::Deck(bool shuffle)
 {
     if (shuffle)
@@ -14,6 +29,10 @@ Deck::Deck(bool shuffle)
     }
 }
 
+/**
+ * @brief
+ *
+ */
 void Deck::buildDeck()
 {
     for (int i = 1; i <= 4; i++)
@@ -26,6 +45,10 @@ void Deck::buildDeck()
     }
 }
 
+/**
+ * @brief
+ *
+ */
 void Deck::shuffleDeck()
 {
     srand(time(nullptr));
@@ -39,11 +62,21 @@ void Deck::shuffleDeck()
     }
 }
 
+/**
+ * @brief
+ *
+ * @return int
+ */
 int Deck::CardsInDeck()
 {
     return deck.size();
 }
 
+/**
+ * @brief
+ *
+ * @return Card
+ */
 Card Deck::Deal()
 {
     Card card = deck[0];
@@ -51,6 +84,11 @@ Card Deck::Deal()
     return card;
 }
 
+/**
+ * @brief
+ *
+ * @return string
+ */
 string Deck::ToString()
 {
     string temp = "";

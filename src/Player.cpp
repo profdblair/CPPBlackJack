@@ -23,16 +23,31 @@ Player::Player(string name, int threshold)
     isBusted = false;
 }
 
+/**
+ * @brief
+ *
+ * @return int
+ */
 int Player::GetThreshold()
 {
     return _winThreshold;
 }
 
+/**
+ * @brief
+ *
+ * @return int
+ */
 int Player::Score()
 {
     return calculateScore();
 }
 
+/**
+ * @brief
+ *
+ * @param faceUp
+ */
 void Player::FlipAllCards(bool faceUp)
 {
     for (int i = 0; i < _hand.size(); i++)
@@ -41,11 +56,75 @@ void Player::FlipAllCards(bool faceUp)
     }
 }
 
+/**
+ * @brief
+ *
+ * @param intCard
+ */
 void Player::FlipCard(int intCard)
 {
     _hand[intCard].isFaceUp = true;
 }
 
+/**
+ * @brief
+ *
+ * @param card
+ */
+void Player::AddCard(Card card)
+{
+    _hand.push_back(card);
+}
+
+/**
+ * @brief
+ *
+ * @return string
+ */
+string Player::ShowHand()
+{
+    string temp = "";
+    for (Card card : _hand)
+    {
+        temp += card.ToString() + "\n";
+    }
+    return temp;
+}
+
+/**
+ * @brief
+ *
+ */
+void Player::EmptyHand()
+{
+    _hand.clear();
+}
+
+/**
+ * @brief
+ *
+ * @return int
+ */
+int Player::CountCards()
+{
+    return _hand.size();
+}
+
+/**
+ * @brief
+ *
+ * @return string
+ */
+string Player::GetName()
+{
+    return _name;
+}
+
+/**
+ * @brief
+ *
+ * @return int
+ */
 int Player::calculateScore()
 {
     int score = 0;
@@ -76,34 +155,4 @@ int Player::calculateScore()
     }
 
     return score;
-}
-
-void Player::AddCard(Card card)
-{
-    _hand.push_back(card);
-}
-
-string Player::ShowHand()
-{
-    string temp = "";
-    for (Card card : _hand)
-    {
-        temp += card.ToString() + "\n";
-    }
-    return temp;
-}
-
-void Player::EmptyHand()
-{
-    _hand.clear();
-}
-
-int Player::CountCards()
-{
-    return _hand.size();
-}
-
-string Player::GetName()
-{
-    return _name;
 }
