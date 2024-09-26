@@ -41,7 +41,6 @@ int main(int argc, char **argv)
 
     for (int i = 0; i < players.size(); i++)
     {
-        // cout << players[i].GetName() << endl;
         //  play hand
         //  deal two cards
         players[i].AddCard(deck.Deal());
@@ -68,39 +67,42 @@ int main(int argc, char **argv)
     // pass function to sort
     sort(players.begin(), players.end(), &comparator);
 
+    int highestScore = 0;
+    for (int i = 0; i < players.size(); i++)
+    {
+        if (players[i].Score() <= 21)
+        {
+            if (players[i].Score() >= highestScore)
+            {
+                players[i].isWinner = true;
+                highestScore = players[i].Score();
+            }
+        }
+    }
+
     // int topScore = 0;
-    bool winners = false;
+    bool busted = false;
 
     cout << "\nSorted scores:\n";
     for (int i = 0; i < players.size(); i++)
     {
-        bool busted = false;
+
         if (players[i].isBusted)
         {
             busted = true;
-            cout << "Player " << players[i].GetName() << " final score: " << players[i].Score() << " BUSTED" << endl;
+            cout << "Player " << players[i].GetName() << " final score: " << players[i].Score()
+                 << " BUSTED" << endl;
         }
-
-        if (!busted)
+        else if (players[i].isWinner)
         {
-            if (winners == false && !players[i].isBusted)
-            {
-                int s1 = players[i].Score();
-                int s2 = players[i + 1].Score();
-                if (s1 == s2)
-                    winners = false;
-                else
-                    winners = true;
-            }
-
-            if (players[i].Score() == 21 && winners)
-            {
-                cout << "Player " << players[i].GetName() << " final score: " << players[i].Score() << " WINNER" << endl;
-            }
-            else
-            {
-                cout << "Player " << players[i].GetName() << " final score: " << players[i].Score() << endl;
-            }
+            busted = true;
+            cout << "Player " << players[i].GetName() << " final score: " << players[i].Score()
+                 << " Winner" << endl;
+        }
+        else
+        {
+            cout << "Player " << players[i].GetName() << " final score: " << players[i].Score()
+                 << endl;
         }
     }
 }

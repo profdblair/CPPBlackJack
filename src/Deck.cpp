@@ -1,18 +1,19 @@
 /**
  * @file Deck.cpp
- * @author your name (you@domain.com)
+ * @author your name (dblair@seafoamtechnologies.com)
  * @brief
  * @version 0.1
  * @date 2024-09-25
  *
- * @copyright Copyright (c) 2024
+ * @copyright Copyright (c) 2024 Seafoam Technologies
  *
  */
 #include <iostream>
 #include "Deck.h"
 
 /**
- * @brief Construct a new Deck:: Deck object
+ * @brief Parameterized constructor that, when true, creates and shuffles
+ *      52 Cards, when false creates 52 Cards in a vector but does not shuffle them.
  *
  * @param shuffle
  */

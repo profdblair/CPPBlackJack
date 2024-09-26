@@ -21,6 +21,7 @@ Player::Player(string name, int threshold)
     _name = name;
     _winThreshold = threshold;
     isBusted = false;
+    isWinner = false;
 }
 
 /**

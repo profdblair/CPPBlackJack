@@ -41,6 +41,9 @@ public:
     /// @brief
     bool isBusted;
 
+    /// @brief
+    bool isWinner;
+
     /**
      * @brief Construct a new Player object
      *
