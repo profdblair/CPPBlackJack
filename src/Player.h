@@ -30,19 +30,19 @@ private:
     /// @brief
     int _winThreshold;
 
-    /**
-     * @brief
-     *
-     * @return int
-     */
-    int calculateScore();
-
 public:
     /// @brief
     bool isBusted;
 
     /// @brief
     bool isWinner;
+
+    /**
+     * @brief
+     *
+     * @return int
+     */
+    int calculateScore(vector<Card>);
 
     /**
      * @brief Construct a new Player object

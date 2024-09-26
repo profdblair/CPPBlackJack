@@ -19,6 +19,10 @@
 Player::Player(string name, int threshold)
 {
     _name = name;
+
+    if (threshold < 1 || threshold > 21)
+        throw runtime_error("Threshold must be between 1 and 21");
+
     _winThreshold = threshold;
     isBusted = false;
     isWinner = false;
@@ -41,7 +45,7 @@ int Player::GetThreshold()
  */
 int Player::Score()
 {
-    return calculateScore();
+    return calculateScore(_hand);
 }
 
 /**
@@ -87,7 +91,7 @@ string Player::ShowHand()
     string temp = "";
     for (Card card : _hand)
     {
-        temp += card.ToString() + "\n";
+        temp += card.ToString() + " ";
     }
     return temp;
 }
@@ -126,12 +130,12 @@ string Player::GetName()
  *
  * @return int
  */
-int Player::calculateScore()
+int Player::calculateScore(vector<Card> hand)
 {
     int score = 0;
     int numberOfAces = 0;
 
-    for (Card card : _hand)
+    for (Card card : hand)
     {
         int val = card.GetValue();
         if (val == 11)
