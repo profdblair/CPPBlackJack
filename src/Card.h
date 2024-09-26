@@ -1,5 +1,5 @@
 /**
- * @file Card.cpp
+ * @file Card.h
  * @author Dave Blair (dblair@seafoamtechnologies.com)
  * @brief This is the include (header) file for a playing Card.
  * @version 0.1
