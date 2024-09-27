@@ -73,9 +73,9 @@ public:
     int GetValue();
 
     /**
-     * @brief Simple string output that represents this playing card face up or face down
+     * @brief Simple string output that represents this playing card face up or face-down
      *
-     * @return string - card representation
+     * @return string - card representation in the form: ACE SPADES or Face down
      */
     string ToString();
 };
