@@ -45,7 +45,7 @@ int Player::GetThreshold()
  */
 int Player::Score()
 {
-    return calculateScore(_hand);
+    return calculateScore();
 }
 
 /**
@@ -130,12 +130,12 @@ string Player::GetName()
  *
  * @return int
  */
-int Player::calculateScore(vector<Card> hand)
+int Player::calculateScore()
 {
     int score = 0;
     int numberOfAces = 0;
 
-    for (Card card : hand)
+    for (Card card : _hand)
     {
         int val = card.GetValue();
         if (val == 11)
