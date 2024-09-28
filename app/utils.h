@@ -11,9 +11,9 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
-#include "../src/Card.h"
-#include "../src/Deck.h"
-#include "../src/Player.h"
+#include <Card.h>
+#include <Deck.h>
+#include <Player.h>
 
 // define the function:
 bool comparator(Player &lhs, Player &rhs)

@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2024 Seafoam Technologies
  *
  */
-#include "Card.h"
+#include <Card.h>
 
 /**
  * @brief Parameterized Construct a new Card

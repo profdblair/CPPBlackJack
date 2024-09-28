@@ -12,7 +12,7 @@
 
 #include <vector>
 #include <string>
-#include "Card.h"
+#include <Card.h>
 
 using namespace std;
 

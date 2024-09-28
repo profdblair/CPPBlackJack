@@ -1,1 +1,4 @@
-add_executable(blackjack game.cpp ../src/Card.cpp ../src/Deck.cpp ../src/Player.cpp)
+add_executable(blackjack game.cpp)
+
+target_link_libraries(blackjack PRIVATE cards)
+target_include_directories(blackjack PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")

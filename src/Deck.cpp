@@ -9,7 +9,7 @@
  *
  */
 #include <iostream>
-#include "Deck.h"
+#include <Deck.h>
 
 /**
  * @brief Parameterized constructor that, when true, creates and shuffles

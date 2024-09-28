@@ -10,9 +10,9 @@
  */
 #include <gtest/gtest.h>
 #include <vector>
-#include "../src/Card.h"
-#include "../src/Deck.h"
-#include "../src/Player.h"
+#include <Card.h>
+#include <Deck.h>
+#include <Player.h>
 
 // https://google.github.io/googletest/reference/assertions.html
 
