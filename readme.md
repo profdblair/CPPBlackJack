@@ -1,11 +1,28 @@
 # CPP Blackjack Game
 
-## Application Tools
+## Specifications
 
--   g++
+The Blackjack application will start by asking the application user how many players are playing the game simulation. Then the application will ask for the first name of all the players. There is no limit to how many player that will play the game. After enter names for all players, the application will play a game simulation for every player. Each player will start with 2 cards, then one at a time, each player will calculate their hand value. Then take another card and recalculate their had value until their hand value is greater than or equal to the threshold. After all players have completed their turns, all players score will be evaluated. They will either have "busted" (gone over 21), or have a score that is compared to all other scores and ranked accordingly. A tie does not matter which player is ranked above another. After all calculations present the game results in a user friendly way (see image).
+
+![game screenshot](blackjackresults.png)
+
+## UML
+
+![uml screenshot](uml-class-diag.png)u
+
+## Constraints
+
+The developers are required to use the following tools:
+
+### Application Tools
+
 -   cmake/make
--   googletest
--   Doxygen
+-   project folders
+    -   app - main game
+    -   inc - h & hpp
+    -   src - cpp
+    -   tests - googletest
+    -   docs - Doxygen
 
 ## Algorithm Considerations
 
