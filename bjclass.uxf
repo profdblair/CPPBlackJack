@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>60</x><y>60</y><w>230</w><h>190</h></coordinates><panel_attributes>Card
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>22</x><y>0</y><w>230</w><h>190</h></coordinates><panel_attributes>Card
 --
 -_value: int
 -_suit: int
@@ -10,7 +10,7 @@
 +isFaceUp: bool
 +Card(int value, int suit, bool isFaceUp)
 +GetValue(): int
-+GetValue(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>60</y><w>180</w><h>180</h></coordinates><panel_attributes>Deck
++GetValue(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>422</x><y>0</y><w>180</w><h>180</h></coordinates><panel_attributes>Deck
 --
 -deck: vector&lt;Card&gt;
 -buildDeck(): void
@@ -19,12 +19,12 @@
 +Deck(bool)
 +Deal(): Card
 +ToString(): string
-+CardsInDeck(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>350</y><w>280</w><h>290</h></coordinates><panel_attributes>Player
++CardsInDeck(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>362</x><y>290</y><w>280</w><h>290</h></coordinates><panel_attributes>Player
 --
-string _name
-vector&lt;Card&gt; _hand
-int _winThreshold
-int calculateScore()
+-_name: string
+-_hand: vector&lt;Card&gt; 
+-_winThreshold: int
+-calculateScore(): int
 --
 +isBusted: bool
 +isWinner: bool
@@ -37,10 +37,10 @@ int calculateScore()
 +CountCards(): int
 +Score(): int
 +FlipCard(int): void
-+FlipAllCards(bool faceUp): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>130</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
++FlipAllCards(bool faceUp): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>242</x><y>70</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=1
 m2=52
-deck has 52 cards</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>240</y><w>420</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+deck has 52 cards</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>122</x><y>180</y><w>420</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=1
 m2=0..n
 player has n cards in hand</panel_attributes><additional_attributes>390;110;390;60;10;60;10;10</additional_attributes></element></diagram>
