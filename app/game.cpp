@@ -11,9 +11,11 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
-#include "utils.h"
+#include <utils.h>
+#include <Card.h>
 
 using namespace std;
+using namespace chants;
 
 int main(int argc, char **argv)
 {

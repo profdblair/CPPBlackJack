@@ -14,6 +14,8 @@
 #include <Deck.h>
 #include <Player.h>
 
+using namespace chants;
+
 // https://google.github.io/googletest/reference/assertions.html
 
 /**

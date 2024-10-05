@@ -10,154 +10,158 @@
  */
 #include <Player.h>
 
-/**
- * @brief Construct a new Player:: Player object
- *
- * @param name
- * @param threshold
- */
-Player::Player(string name, int threshold)
+namespace chants
 {
-    _name = name;
 
-    if (threshold < 1 || threshold > 21)
-        throw runtime_error("Threshold must be between 1 and 21");
-
-    _winThreshold = threshold;
-    isBusted = false;
-    isWinner = false;
-}
-
-/**
- * @brief
- *
- * @return int
- */
-int Player::GetThreshold()
-{
-    return _winThreshold;
-}
-
-/**
- * @brief
- *
- * @return int
- */
-int Player::Score()
-{
-    return calculateScore();
-}
-
-/**
- * @brief
- *
- * @param faceUp
- */
-void Player::FlipAllCards(bool faceUp)
-{
-    for (int i = 0; i < _hand.size(); i++)
+    /**
+     * @brief Construct a new Player:: Player object
+     *
+     * @param name
+     * @param threshold
+     */
+    Player::Player(string name, int threshold)
     {
-        _hand[i].isFaceUp = faceUp;
+        _name = name;
+
+        if (threshold < 1 || threshold > 21)
+            throw runtime_error("Threshold must be between 1 and 21");
+
+        _winThreshold = threshold;
+        isBusted = false;
+        isWinner = false;
     }
-}
 
-/**
- * @brief
- *
- * @param intCard
- */
-void Player::FlipCard(int intCard)
-{
-    _hand[intCard].isFaceUp = true;
-}
-
-/**
- * @brief
- *
- * @param card
- */
-void Player::AddCard(Card card)
-{
-    _hand.push_back(card);
-}
-
-/**
- * @brief
- *
- * @return string
- */
-string Player::ShowHand()
-{
-    string temp = "";
-    for (Card card : _hand)
+    /**
+     * @brief
+     *
+     * @return int
+     */
+    int Player::GetThreshold()
     {
-        temp += card.ToString() + " ";
+        return _winThreshold;
     }
-    return temp;
-}
 
-/**
- * @brief
- *
- */
-void Player::EmptyHand()
-{
-    _hand.clear();
-}
-
-/**
- * @brief
- *
- * @return int
- */
-int Player::CountCards()
-{
-    return _hand.size();
-}
-
-/**
- * @brief
- *
- * @return string
- */
-string Player::GetName()
-{
-    return _name;
-}
-
-/**
- * @brief
- *
- * @return int
- */
-int Player::calculateScore()
-{
-    int score = 0;
-    int numberOfAces = 0;
-
-    for (Card card : _hand)
+    /**
+     * @brief
+     *
+     * @return int
+     */
+    int Player::Score()
     {
-        int val = card.GetValue();
-        if (val == 11)
+        return calculateScore();
+    }
+
+    /**
+     * @brief
+     *
+     * @param faceUp
+     */
+    void Player::FlipAllCards(bool faceUp)
+    {
+        for (int i = 0; i < _hand.size(); i++)
         {
-            numberOfAces++;
+            _hand[i].isFaceUp = faceUp;
         }
-        score += val;
     }
 
-    if (score > 21)
+    /**
+     * @brief
+     *
+     * @param intCard
+     */
+    void Player::FlipCard(int intCard)
     {
-        while (true)
+        _hand[intCard].isFaceUp = true;
+    }
+
+    /**
+     * @brief
+     *
+     * @param card
+     */
+    void Player::AddCard(Card card)
+    {
+        _hand.push_back(card);
+    }
+
+    /**
+     * @brief
+     *
+     * @return string
+     */
+    string Player::ShowHand()
+    {
+        string temp = "";
+        for (Card card : _hand)
         {
-            if (numberOfAces > 0)
+            temp += card.ToString() + " ";
+        }
+        return temp;
+    }
+
+    /**
+     * @brief
+     *
+     */
+    void Player::EmptyHand()
+    {
+        _hand.clear();
+    }
+
+    /**
+     * @brief
+     *
+     * @return int
+     */
+    int Player::CountCards()
+    {
+        return _hand.size();
+    }
+
+    /**
+     * @brief
+     *
+     * @return string
+     */
+    string Player::GetName()
+    {
+        return _name;
+    }
+
+    /**
+     * @brief
+     *
+     * @return int
+     */
+    int Player::calculateScore()
+    {
+        int score = 0;
+        int numberOfAces = 0;
+
+        for (Card card : _hand)
+        {
+            int val = card.GetValue();
+            if (val == 11)
             {
-                score = score - 10;
-                numberOfAces--;
+                numberOfAces++;
             }
-            else
-                break;
+            score += val;
         }
-    }
 
-    return score;
+        if (score > 21)
+        {
+            while (true)
+            {
+                if (numberOfAces > 0)
+                {
+                    score = score - 10;
+                    numberOfAces--;
+                }
+                else
+                    break;
+            }
+        }
+
+        return score;
+    }
 }

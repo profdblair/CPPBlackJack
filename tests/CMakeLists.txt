@@ -6,7 +6,7 @@ add_executable(
 target_link_libraries(
   blackjacktests
   GTest::gtest_main
-  cards
+  CardLib
 )
 
 add_test(NAME cards COMMAND cards)

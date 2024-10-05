@@ -8,7 +8,7 @@ add_subdirectory(src)
 add_subdirectory(app)
 add_subdirectory(inc)
 
-# add_executable(blackjack ./app/CardTest.cpp ./src/Card.cpp ./src/Deck.cpp ./src/Player.cpp)
+#add_executable(blackjack2 ./app/CardTest.cpp ./src/Card.cpp ./src/Deck.cpp ./src/Player.cpp)
 
 include(FetchContent)
 FetchContent_Declare(

@@ -16,53 +16,57 @@
 
 using namespace std;
 
-/**
- * @brief
- *
- */
-class Deck
+namespace chants
 {
-private:
-    /// @brief
-    vector<Card> deck;
 
     /**
      * @brief
      *
      */
-    void buildDeck();
+    class Deck
+    {
+    private:
+        /// @brief
+        vector<Card> deck;
 
-    /**
-     * @brief
-     *
-     */
-    void shuffleDeck();
+        /**
+         * @brief
+         *
+         */
+        void buildDeck();
 
-public:
-    /**
-     * @brief Construct a new Deck object
-     *
-     */
-    Deck(bool);
+        /**
+         * @brief
+         *
+         */
+        void shuffleDeck();
 
-    /**
-     * @brief
-     *
-     * @return Card
-     */
-    Card Deal();
+    public:
+        /**
+         * @brief Construct a new Deck object
+         *
+         */
+        Deck(bool);
 
-    /**
-     * @brief
-     *
-     * @return string
-     */
-    string ToString();
+        /**
+         * @brief
+         *
+         * @return Card
+         */
+        Card Deal();
 
-    /**
-     * @brief
-     *
-     * @return int
-     */
-    int CardsInDeck();
-};
+        /**
+         * @brief
+         *
+         * @return string
+         */
+        string ToString();
+
+        /**
+         * @brief
+         *
+         * @return int
+         */
+        int CardsInDeck();
+    };
+}

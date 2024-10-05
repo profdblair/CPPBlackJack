@@ -11,91 +11,95 @@
 #include <iostream>
 #include <Deck.h>
 
-/**
- * @brief Parameterized constructor that, when true, creates and shuffles
- *      52 Cards, when false creates 52 Cards in a vector but does not shuffle them.
- *
- * @param shuffle
- */
-Deck::Deck(bool shuffle)
+namespace chants
 {
-    if (shuffle)
-    {
-        buildDeck();
-        shuffleDeck();
-    }
-    else
-    {
-        buildDeck();
-    }
-}
 
-/**
- * @brief
- *
- */
-void Deck::buildDeck()
-{
-    for (int i = 1; i <= 4; i++)
+    /**
+     * @brief Parameterized constructor that, when true, creates and shuffles
+     *      52 Cards, when false creates 52 Cards in a vector but does not shuffle them.
+     *
+     * @param shuffle
+     */
+    Deck::Deck(bool shuffle)
     {
-        for (int j = 1; j <= 13; j++)
+        if (shuffle)
         {
-            Card card(j, i, false);
-            deck.push_back(card);
+            buildDeck();
+            shuffleDeck();
+        }
+        else
+        {
+            buildDeck();
         }
     }
-}
 
-/**
- * @brief
- *
- */
-void Deck::shuffleDeck()
-{
-    srand(time(nullptr));
-    for (int i = 0; i < 10000; i++)
+    /**
+     * @brief
+     *
+     */
+    void Deck::buildDeck()
     {
-        int index1 = rand() % 52;
-        int index2 = rand() % 52;
-        Card tempCard = deck[index1];
-        deck[index1] = deck[index2];
-        deck[index2] = tempCard;
+        for (int i = 1; i <= 4; i++)
+        {
+            for (int j = 1; j <= 13; j++)
+            {
+                Card card(j, i, false);
+                deck.push_back(card);
+            }
+        }
     }
-}
 
-/**
- * @brief
- *
- * @return int
- */
-int Deck::CardsInDeck()
-{
-    return deck.size();
-}
-
-/**
- * @brief
- *
- * @return Card
- */
-Card Deck::Deal()
-{
-    Card card = deck[0];
-    deck.erase(deck.begin());
-    return card;
-}
-
-/**
- * @brief
- *
- * @return string
- */
-string Deck::ToString()
-{
-    string temp = "";
-    for (Card card : deck)
+    /**
+     * @brief
+     *
+     */
+    void Deck::shuffleDeck()
     {
-        temp += card.ToString() + "\n";
+        srand(time(nullptr));
+        for (int i = 0; i < 10000; i++)
+        {
+            int index1 = rand() % 52;
+            int index2 = rand() % 52;
+            Card tempCard = deck[index1];
+            deck[index1] = deck[index2];
+            deck[index2] = tempCard;
+        }
     }
-    return temp;
+
+    /**
+     * @brief
+     *
+     * @return int
+     */
+    int Deck::CardsInDeck()
+    {
+        return deck.size();
+    }
+
+    /**
+     * @brief
+     *
+     * @return Card
+     */
+    Card Deck::Deal()
+    {
+        Card card = deck[0];
+        deck.erase(deck.begin());
+        return card;
+    }
+
+    /**
+     * @brief
+     *
+     * @return string
+     */
+    string Deck::ToString()
+    {
+        string temp = "";
+        for (Card card : deck)
+        {
+            temp += card.ToString() + "\n";
+        }
+        return temp;
+    }
 }

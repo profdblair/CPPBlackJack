@@ -15,101 +15,104 @@
 #include <Card.h>
 
 using namespace std;
-
-/**
- * @brief
- *
- */
-class Player
+namespace chants
 {
-private:
-    /// @brief
-    string _name;
-    /// @brief
-    vector<Card> _hand;
-    /// @brief
-    int _winThreshold;
-
-    /**
-     * @brief
-     *
-     * @return int
-     */
-    int calculateScore();
-
-public:
-    /// @brief
-    bool isBusted;
-
-    /// @brief
-    bool isWinner;
-
-    /**
-     * @brief Construct a new Player object
-     *
-     * @param name
-     * @param threshold
-     */
-    Player(string name, int threshold);
-
-    /**
-     * @brief Get the Threshold object
-     *
-     * @return int
-     */
-    int GetThreshold();
-
-    /**
-     * @brief Get the Name object
-     *
-     * @return string
-     */
-    string GetName();
-
-    /**
-     * @brief
-     *
-     * @param card
-     */
-    void AddCard(Card card);
-
-    /**
-     * @brief
-     *
-     * @return string
-     */
-    string ShowHand();
 
     /**
      * @brief
      *
      */
-    void EmptyHand();
+    class Player
+    {
+    private:
+        /// @brief
+        string _name;
+        /// @brief
+        vector<Card> _hand;
+        /// @brief
+        int _winThreshold;
 
-    /**
-     * @brief
-     *
-     * @return int
-     */
-    int CountCards();
+        /**
+         * @brief
+         *
+         * @return int
+         */
+        int calculateScore();
 
-    /**
-     * @brief
-     *
-     * @return int
-     */
-    int Score();
+    public:
+        /// @brief
+        bool isBusted;
 
-    /**
-     * @brief
-     *
-     */
-    void FlipCard(int);
+        /// @brief
+        bool isWinner;
 
-    /**
-     * @brief
-     *
-     * @param faceUp
-     */
-    void FlipAllCards(bool faceUp);
-};
+        /**
+         * @brief Construct a new Player object
+         *
+         * @param name
+         * @param threshold
+         */
+        Player(string name, int threshold);
+
+        /**
+         * @brief Get the Threshold object
+         *
+         * @return int
+         */
+        int GetThreshold();
+
+        /**
+         * @brief Get the Name object
+         *
+         * @return string
+         */
+        string GetName();
+
+        /**
+         * @brief
+         *
+         * @param card
+         */
+        void AddCard(Card card);
+
+        /**
+         * @brief
+         *
+         * @return string
+         */
+        string ShowHand();
+
+        /**
+         * @brief
+         *
+         */
+        void EmptyHand();
+
+        /**
+         * @brief
+         *
+         * @return int
+         */
+        int CountCards();
+
+        /**
+         * @brief
+         *
+         * @return int
+         */
+        int Score();
+
+        /**
+         * @brief
+         *
+         */
+        void FlipCard(int);
+
+        /**
+         * @brief
+         *
+         * @param faceUp
+         */
+        void FlipAllCards(bool faceUp);
+    };
+}
