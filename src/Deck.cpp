@@ -83,9 +83,16 @@ namespace chants
      */
     Card Deck::Deal()
     {
-        Card card = deck[0];
-        deck.erase(deck.begin());
-        return card;
+        if (deck.size() > 1)
+        {
+            Card card = deck[0];
+            deck.erase(deck.begin());
+            return card;
+        }
+        else
+        {
+            throw runtime_error("Deck is out of cards.");
+        }
     }
 
     /**

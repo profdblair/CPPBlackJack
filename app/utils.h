@@ -90,7 +90,15 @@ namespace chants
             {
                 if (players[i].Score() < players[i].GetThreshold())
                 {
-                    players[i].AddCard(deck.Deal());
+                    try
+                    {
+                        players[i].AddCard(deck.Deal());
+                    }
+                    catch (runtime_error e)
+                    {
+                        cout << e.what() << endl;
+                        break;
+                    }
                 }
                 else
                 {
