@@ -79,12 +79,21 @@ namespace chants
 
     void PlayBlackJack(vector<Player> &players, Deck &deck)
     {
+
         for (int i = 0; i < players.size(); i++)
         {
             //  play hand
             //  deal two cards
-            players[i].AddCard(deck.Deal());
-            players[i].AddCard(deck.Deal());
+            try
+            {
+                players[i].AddCard(deck.Deal());
+                players[i].AddCard(deck.Deal());
+            }
+            catch (runtime_error e)
+            {
+                cout << "OVER DELT!" << endl;
+                exit(-1);
+            }
 
             while (true)
             {
@@ -96,8 +105,8 @@ namespace chants
                     }
                     catch (runtime_error e)
                     {
-                        cout << e.what() << endl;
-                        break;
+                        cout << "OVER DELT!" << endl;
+                        exit(-2);
                     }
                 }
                 else
